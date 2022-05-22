@@ -1,1 +1,2 @@
-# test.github.io
+# discount tool
+[Live demo](ttps://maedakatoo.github.io/test1/)
