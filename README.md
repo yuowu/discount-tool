@@ -1,2 +1,3 @@
 # discount tool
-[Live demo](https://maedakatoo.github.io/test1/)
+Pyscript-based tool
+[Live demo](https://maedakatoo.github.io/discount-tool/)
