@@ -1,2 +1,83 @@
-<title>1</title>
-2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <title> Celsius To Fahrenheit </title>
+    
+    <!-- Pyscript -->
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+    h3 {
+	font-family: 'Montserrat', sans-serif;
+	}
+	h4 {font-family: 'Montserrat', sans-serif;
+	}
+    h1 {
+	font-family: 'Montserrat', sans-serif;
+	}
+    button {
+	font-family: 'Montserrat', sans-serif;
+	}
+    textarea {
+	font-family: 'Montserrat', sans-serif;
+	}
+    input {
+	font-family: 'Montserrat', sans-serif;
+	}	
+	
+    body {
+        background-color: #fcfcfc;
+        padding-top: 55px;
+        min-height: 100vh;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+      }
+    </style>  
+    
+</head>
+<body>
+
+<py-script>
+def calc(price, discount):
+    f = round((float(price)) - (float(price)) * (float(discount)) / 100, 2)
+    return f
+
+def convert(*ags, **kws):
+    price = document.getElementById('price').value;
+    discount = document.getElementById('discount').value;
+    result = calc(price, discount)
+    pyscript.write("result",result)    
+</py-script>    
+
+    <div class="container">
+        
+        <h1 class="text-center">
+            Discount tool
+        </h1>
+        <br />
+        <p><h3>Enter price and discount in rows below:</h3>
+        <input id="price" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Price (e.g 500)" /></p>
+		<input id="discount" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Discount (without %)" /></p>
+        <center>
+            <button id="convert" type="submit"  class="btn btn-info" pys-onClick="convert">Convert</button>
+
+        </center>
+        
+        <p>
+        <h4>Result:</h4>
+        <textarea id="result" class="form-control" rows="2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Result"></textarea></p>
+    
+        
+    </div>    
+    
+    </body>
+    </html>    
