@@ -1,2 +1,2 @@
 # discount tool
-[Live demo](ttps://maedakatoo.github.io/test1/)
+[Live demo](https://maedakatoo.github.io/test1/)
